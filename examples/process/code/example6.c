@@ -14,7 +14,8 @@ int main() {
     int k;
     // char* argv[]={"cal","10","2018",NULL};
     // k=execv("/usr/bin/cal",argv);
-    k = execl("/usr/bin/cal", "cal", "10", "2021", NULL);
+    // k = execl("/usr/bin/cal", "cal", "10", "2021", NULL);
+    execlp("cal","cal", "10", "2021", NULL);
     if (k < 0) {
       perror("execv");
       exit(1);
